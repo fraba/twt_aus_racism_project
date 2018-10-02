@@ -1,0 +1,373 @@
+\documentclass[serif, aspectratio=169]{beamer}
+
+\usetheme{metropolis}
+
+% Define title
+\newcommand{\doctitle}{Racism in online interactions}
+\newcommand{\docsubtitle}{}% Remove if not needed
+
+% Define author
+\newcommand{\docauthor}{Francesco Bailo}
+% \newcommand{\docauthortitle}{PhD Student}
+\newcommand{\docauthorinstitute}{Department of Media and Communications, The University of Sydney}
+\newcommand{\docauthoremail}{francesco.bailo@sydney.edu.au}
+\newcommand{\InstitutePlace}{Gale Digital Scholar Lab}
+
+% Define subject and keywords
+\newcommand{\docsubject}{ADD SUBJECT HERE}
+\newcommand{\dockeywords}{Keywords;}
+
+% Define creation date (format D:YYYYMMDDHHmmss)
+\newcommand{\doccreationdate}{D:201809031900}
+
+\input{/Users/francesco/tex_inputs/biblatex_apa}
+\input{/Users/francesco/tex_inputs/default_slides_set}
+
+
+% Beamer buttons
+
+\setbeamertemplate{button}{\tikz
+  \node[
+  inner xsep=4pt,
+  draw=structure!80,
+  fill=structure!50,
+  rounded corners=4pt]  {\tiny\insertbuttontext};}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\doctitle \docsubtitle} % Article title
+
+\author{
+\large
+\textsc{Francesco Bailo (with Gerard Goggin)}\\[2mm] 
+\normalsize Department of Media and Communications, The University of Sydney \\
+\InstitutePlace
+% \normalsize \href{mailto:\docauthoremail}{\docauthoremail} 
+% \vspace{-5mm}
+}
+
+\date{3 October 2018}
+
+\usepackage[titletoc]{appendix}
+\usepackage{graphicx}
+\usepackage{media9}
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	HEADER AND FOOTER SECTION
+%----------------------------------------------------------------------------------------
+
+\setbeamertemplate{headline}{%
+\leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}%
+    \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}
+    \end{beamercolorbox}%
+  }
+}
+
+
+\setbeamertemplate{footline}[text line]{%
+  \parbox{\linewidth}{\vspace*{-8pt} @FrBailo \hfill\insertpagenumber/\insertpresentationendpage
+}}
+
+%----------------------------------------------------------------------------------------
+
+\newcommand{\customcite}[1]{\citeauthor{#1}, \citetitle{#1}, \citeyear{#1}}
+
+
+\usepackage{newverbs}
+\newverbcommand{\bverb}
+  {\begin{lrbox}{\verbbox}}
+  {\end{lrbox}\colorbox{gray!30}{\box\verbbox}}
+
+\begin{document}
+
+{
+\setbeamertemplate{headline}{} 
+\setbeamertemplate{footline}{} 
+\begin{frame}
+  \titlepage
+\end{frame}
+}
+\addtocounter{framenumber}{-1}
+
+\frame{\tableofcontents}
+
+\section{Justification and research question}
+
+\begin{frame}
+
+According to a survey we conducted within the Digital Rights and Governance project among 1,600 Australians, about one-third of respondents who declare to speak a language other than English at home have been subjected to racism in their online interactions. \autocite{goggin_digital_2017}
+
+\begin{figure}
+\includegraphics{"/Users/francesco/public_git/twt_aus_racism_project/replication_package/survey_res_racism1"}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+{Research question?}
+
+Based on empirical observation, how likely an Australian Twitter user with a non-Anglo-Saxon background is subjected to racism?
+
+\end{frame}
+
+
+\section{Research design}
+
+\begin{frame}
+{Main challenges}
+
+In order to answer to the research question, I need to
+
+\begin{enumerate}
+
+\item Create a \textit{representative sample} of Twitter users and tweets;
+
+\item Identify the \textit{ethnic background} of Twitter users;
+
+\item Assess if tweets are \textit{racist} or not.
+
+\end{enumerate}
+
+Note: The research project is under revision by the research and ethics committee of the University.
+
+\end{frame}
+
+\begin{frame}
+{Creating a representative sample of Twitter users and tweets}
+
+\begin{figure}
+\includegraphics{"/Users/francesco/public_git/twt_aus_racism_project/replication_package/survey_res_racism2"}
+\end{figure}
+
+Twitter is used by less than 15\% of Internet users who speaks a language other than English but they are highly concentrated in cities. 
+
+
+\end{frame}
+
+\begin{frame}
+{Distribution of Italian speaking population (Sydney, 2016 census)}
+
+\begin{figure}
+\includegraphics[width=0.75\textwidth]{"/Users/francesco/public_git/twt_aus_racism_project/replication_package/map_italian_speaking"}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+{Distribution of Cantonese speaking population (Sydney, 2016 census)}
+
+\begin{figure}
+\includegraphics[width=0.75\textwidth]{"/Users/francesco/public_git/twt_aus_racism_project/replication_package/map_cantonese_speaking"}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+{Distribution of Vietnamese speaking population (Sydney, 2016 census)}
+
+\begin{figure}
+\includegraphics[width=0.75\textwidth]{"/Users/francesco/public_git/twt_aus_racism_project/replication_package/map_vietnamese_speaking"}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+{Distribution of Arabic speaking population (Sydney, 2016 census)}
+
+\begin{figure}
+\includegraphics[width=0.75\textwidth]{"/Users/francesco/public_git/twt_aus_racism_project/replication_package/map_arab_speaking"}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+{Creating a representative sample of Twitter users and tweets}
+
+\begin{itemize}
+\item 23,401,892 (100\%) people living in Australia on census night 2016;
+\item 6,388,717 (27\%) people speaking a language other than English (PLOE);
+\item 4,400,000 (70\%, estim.) PLOE on the Internet;
+\item 650,000 (14\%) PLOE on Twitter.
+\end{itemize}
+
+Residents speaking a language other than English tend to cluster in specific areas.
+
+I can use the filtering functions of the Twitter API to collect tweets published in those areas.  
+
+\end{frame}
+
+\begin{frame}[fragile]
+{Distribution of Arabic speaking population (Sydney, 2016 census)}
+
+\begin{columns}
+\begin{column}{0.7\textwidth}
+\begin{figure}
+\includegraphics[width=0.85\textwidth]{"/Users/francesco/public_git/twt_aus_racism_project/replication_package/map_arab_speaking_zoom"}
+\end{figure}
+\end{column}
+\begin{column}{0.3\textwidth}
+{\scriptsize Limits to filter realtime Tweets via API for \textit{Greenacre} \\ \tt{statuses/filter} \& \tt{locations=151.04014, -33.91810, 151.07729, -33.88318}}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+{Testing Greenacre API query}
+
+Over 4 days (long weekend):
+
+\begin{itemize}
+
+\item 35,584 tweets;
+\item 41\% of tweets are a reply;
+\item 6,338 Twitter users.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+{Creating a representative sample of Twitter users and tweets}
+
+Defining 30 bounding boxes in Sydney, Melbourne, Brisbane and Adelaide and filtering results from the Streaming API based on the diffusion of languages.
+
+\begin{itemize}
+
+\item Italian;
+\item Greek;
+\item Arabic;
+\item Cantonese;
+\item Mandarin;
+\item Vietnamese.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+{Identifying the ethnic background of Twitter users}
+
+{\small
+
+The identification of the ethnic background of Twitter users is conducted by comparing user names to a dictionary of common first names derived from \url{en.wiktionary.org}.
+
+The dictionary is compiled by parsing all given names/surnames and their variations in the categories:
+
+}
+
+{\tiny
+
+\begin{itemize}
+
+\item Italian male given names;
+\item Italian female given names;
+\item Greek male given names;
+\item Greek female given names;
+\item ... 
+\item English surnames from Chinese;
+\item Vietnamese male given names‎.
+\item Vietnamese female given names‎.
+
+\end{itemize}
+
+}
+
+\end{frame}
+
+\begin{frame}
+
+\begin{figure}
+\includegraphics[width=.9\textwidth]{"/Users/francesco/Desktop/wiktionary"}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+{Identifying the ethnic background of Twitter users}
+
+Labelling approaches:
+
+\begin{itemize}
+
+\item Simple match (given name/surname is present in Twitter user name);
+\item Supervised learning: training an algorithm by manually coding a selected sample.
+
+\end{itemize}
+
+Issues:
+
+\begin{itemize}
+
+\item False positives (e.g. the Arabic name \texttt{Ali} will match \texttt{Ali} short for \textit{Alice});
+\item Supervised learning requires significant time investment for manual labelling and assessment of predictions. 
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+{Creating a representative sample of Twitter users and tweets}
+
+When user names are identified as belonging to PLOE, replies directed to them will be pulled from TrISMA (trisma.org).
+
+TrISMA have been tracking and storing tweets of the \enquote{most active Australian Twitter accounts}.
+
+TrISMA data will allow to expand the dataset longitudinally. 
+
+\end{frame}
+
+\begin{frame}
+{Assessing if tweets are racist or not}
+
+Labelling approaches:
+
+\begin{description}
+
+\item[Dictionary-based approach]: A dictionary was created from the Wiktionary category \textttt{English ethnic slurs} (containing 332 terms).
+
+\item[Supervised learning approach] based on three categories \textit{Toxicity}, \textit{Aggression} and \textit{Personal Attacks} based on the manually coded dataset released by the \enquote{Wikipedia Detox project}.
+
+\end{description}
+
+
+\end{frame}
+
+\begin{frame}
+{Assessing if tweets are racist or not}
+
+The \textbf{Dictionary-based approach} will return a binary answer to the question if a tweet contains racist terms. 
+
+But the \textbf{Supervised learning approach} will return a more nuanced answer based (racism is a subjective experience!) on three dimensions: 
+
+\begin{description}
+
+\item[Toxicity] How strongly the message is \enquote{perceived as likely to make [the recipient] want to leave the discussion}.
+
+\item[Aggression] \enquote{How strongly the message is perceived as aggressive} towards the recipient.
+
+\item[Personal Attack] \enquote{[W]hether it contains a personal attack} towards the recipient.
+
+\end{description}
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+\printbibliography
+\end{frame}
+
+
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
